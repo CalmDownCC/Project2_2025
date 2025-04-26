@@ -42,7 +42,7 @@ def send_email(water_status):
 def check_soil_moisture():
     """Check soil moisture level"""
     moisture = GPIO.input(channel)
-    return "Water NOT needed" if moisture else "Please water your plant"
+    return "Please water your plant" if moisture else "Water NOT needed"
 
 print ("Plant monitoring system started...")
 print (f"Initial check at {start_hour}:00, then every {check_interval} hours")
